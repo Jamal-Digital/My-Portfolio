@@ -87,7 +87,7 @@ nav ul{
     left: 0;
     right: 0;
     background: #c9bad618;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(50px);
     padding: 20px; 
     border-radius: 20px;
     display: flex;
@@ -177,7 +177,7 @@ section.hero-section .image .arrow{
     left: 0;
     top: 0;
 }
-h1{
+section.hero-section h1{
     font-size: 2rem;
     color: white;
     text-align: center;
@@ -286,9 +286,10 @@ section.skills-section img{
     object-fit: contain;
     width: 100%;
     margin-top: 40px;
-    animation-name: appear;
-    animation-duration: .4s;
+    animation-name: bounce;
     animation-timing-function: ease;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 /********** PROJECT SECTION **********************/
 section.project-section{
@@ -336,7 +337,7 @@ section.project-section .container .image img.Portfolio{
     object-fit: contain;
     width: 100%;
     border-radius: 5px;
-    animation-name: appear;
+    animation-name: bounce;
     animation-timing-function: ease;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
