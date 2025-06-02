@@ -1,0 +1,495 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Preahvihear&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: "Preahvihear", serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --bg: #11071F;
+    --linear-One: linear-gradient(85deg,#130428, #251043,  #38126D, #261045, #190634);
+    --linear-Two: linear-gradient(85deg,#261045, #38126D, #251043,   #190634, #130428);
+    
+}
+
+body{
+    position: relative;
+    background: var(--bg);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+main{
+    width: 100%;
+}
+img{
+    display: block;
+}
+a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.79);
+   
+}
+nav ul li a{
+    position: relative;
+}
+nav ul li a::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width:  0;
+    background:
+    linear-gradient(85deg,#ffffff, #a698ba, #6f5b8c);
+    height: 4px;
+    bottom: -4px;
+    z-index: 400;
+    transition: .5s;
+}
+nav ul li a:hover::before{
+    width: 100%;
+}
+header{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    left: 20px;
+    z-index: 60000000;
+    max-width: 100%;
+}
+nav img{
+   cursor: pointer; 
+   transition: .5s;
+}
+nav{
+    background: #c9bad618;
+    backdrop-filter: blur(50px);
+    padding: 12px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+nav ul{
+    position: absolute;
+    top: 140%;
+    left: 0;
+    right: 0;
+    background: #c9bad618;
+    backdrop-filter: blur(40px);
+    padding: 20px; 
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center ;
+    transform: translateY(-700px);
+    transition: .5s;
+    z-index: 4000000;
+}
+.active-nav{
+    transform: translateY(0px)
+
+}
+nav ul div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+nav ul div img:hover{
+    filter: brightness(.5);
+}
+
+
+/******** HERO SECTION ***********/ 
+section{
+    padding-inline: 20px;
+    padding-block: 50px;
+    max-width: 100%;
+}
+section.hero-section .container{
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+section.hero-section .container .desktop{
+    display: none;
+    animation-name: float-in;
+    animation-duration: 1s;
+}
+section.hero-section .container .mobile{
+    animation-name: float-in;
+    animation-duration: 2s;
+}
+section.hero-section .container h2{
+    font-size: 1.1875rem;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+}
+section.hero-section .container .image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+section.hero-section .container .image img.me{
+    animation-name: float-in;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+}
+section.hero-section .container h2{
+    margin-bottom: -40px;
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+
+}
+section.hero-section .container .content h2{
+    margin-bottom: 40px;
+}
+ h2 {
+    
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+ h2 span , .circle{
+    color: #7127BA;
+}
+section.hero-section .image .arrow{
+    transform: rotate(290deg);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+h1{
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    line-height: 150%;
+    font-weight: 500;
+    position: relative;
+    animation-name: bounce;
+    animation-timing-function: ease;
+    animation-timing-function: ease;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+
+}
+.circle::before{
+    position: absolute;
+    content: '';
+    top: 40px;
+    display: inline;
+    left: 90px;
+    width: 60%;
+    height: 80%;
+    background: url(images/Ellipse\ 5.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+p{
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+    padding-block: 10px;
+    animation-name: bounce;
+    animation-timing-function: ease;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+/************** EXPERIENCE SECTION *************/
+section.experience-section .container{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 40px;
+    gap:  20px;
+}
+section.experience-section img.gradient{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    object-fit: contain;
+    max-width:  100%;
+    z-index: -4000000;
+}
+section.experience-section h2{
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.experience-section .container .grid{
+    display: flex;
+    align-items: center;
+    background: var(--linear-One);
+    padding: 20px;
+    gap:  20px;
+    border-radius: 15px;
+    border-top: #763CAC 2px solid;
+    animation-name: bounce;
+    animation-timing-function: ease;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.experience-section .container .grid.middle-grid{
+    background: var(--linear-Two);
+    animation-name: bounce;
+    animation-timing-function: ease;
+    animation-timeline: view();
+    animation-range: entry 0;
+    
+}
+.experience-section .container .grid ul{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 5px;
+    align-items: first baseline;
+}
+.experience-section .container .grid ul p{
+    font-size:  1rem;
+    padding: 0;
+    font-weight: 600;
+}
+.experience-section .container .grid ul span{
+    font-size: 15px;
+    line-height: 140%;
+}
+
+/********** SKILLS SECTION **********************/
+section.skills-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+section.skills-section img{
+    object-fit: contain;
+    width: 100%;
+    margin-top: 40px;
+    animation-name: appear;
+    animation-duration: .4s;
+    animation-timing-function: ease;
+}
+/********** PROJECT SECTION **********************/
+section.project-section{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+section.project-section p{
+    text-align: left;
+    padding: 0;
+}
+section.project-section p.title{
+    color:  #7127BA;
+}
+section.project-section .container{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: none;
+    background-image: url(images/Gradient.png);
+    background-repeat: no-repeat;
+    background-position: top;
+  
+}
+section.project-section div.main-content{
+    background: #c9bad618;
+    backdrop-filter: blur(50px);
+    padding: 12px;
+    border-radius: 12px;
+    margin-top: 30px;
+    animation-name: bounce;
+    animation-timing-function: ease;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+section.project-section div p{
+    font-size: 15px;
+}
+
+section.project-section .container .image{
+   position: relative;
+   z-index: 40000;
+}
+section.project-section .container .image img.Portfolio{
+    object-fit: contain;
+    width: 100%;
+    border-radius: 5px;
+    animation-name: appear;
+    animation-timing-function: ease;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    
+}
+
+section.project-section .container .content ul{
+    margin-top:  20px;
+    display:flex;
+    gap:  15px;
+}
+section.project-section .container .content button{
+    padding-inline: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #130428;
+    cursor: pointer;
+    border: none;
+}
+section.project-section .container .content button.visit-btn{
+    background-color: #7127BA;
+    color: white;
+}
+
+/**************** Review section *******/
+.review-container{
+    display: grid;
+     grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    padding-block: 40px;
+}
+.review-box{
+    border: solid 2px #38126d85;
+    padding: 18px;
+    border-radius: 8px;
+}
+.review-id{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.review-id .review-name, .review-title{
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+.review-id .review-name{
+    font-size: 17px;
+}
+.review-id .review-title{
+    color: #7127BA;
+}
+.review-id-img{
+    object-fit: cover;
+    max-width: 100%;
+    border-radius: 40px;
+}
+.review-content{
+    text-align: left;
+}
+.review-rating{
+    margin-top: 18px;
+    display: flex;
+    gap: 8px;
+}
+
+/**************** contact section *******/
+section.contact-section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+ section.contact-section .container p{
+    text-align: left;
+ }
+ section.contact-section .container .content .social{
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+ }
+ section.contact-section .container form ul{
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    margin-bottom: 30px;
+    
+ }
+ section.contact-section .container form {
+    flex-basis: 50%;
+ }
+ section.contact-section .container form input,textarea{
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 10px;
+    padding: 12px;
+    color: white;
+    border: none;
+    box-shadow: 0 0 8px white;
+    background-color: #c9bad62b;
+    backdrop-filter: 80px;
+ }
+ section.contact-section .container textarea{
+   padding-block: 30px;
+ }
+ section.contact-section .container textarea:focus , form input:focus{
+    outline: none;
+ }
+ section.contact-section .container form button{
+    padding-inline: 20px;
+    padding-block: 10px;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 20px;
+    background-color: #7127BA;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .5s ;
+ }
+ section.contact-section .container form button:hover{
+    background-color: #7027baa8;
+    color: rgba(255, 255, 255, 0.611)
+ }
+
+ @keyframes float-in {
+    0%{
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    100%{
+        opacity: 1;
+        
+        transform: translateY(0px);
+    }
+ }
+ @keyframes bounce {
+    0%{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100%{
+        opacity: 1;  
+        transform: translateY(0);
+    }
+ }
+ @keyframes appear {
+    0%{
+        opacity: 0;
+        transform: scle(0);
+    }
+    100%{
+        opacity: 1;  
+        transform: scale(1);
+    }
+ }

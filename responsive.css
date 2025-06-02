@@ -1,0 +1,173 @@
+@media (width >= 550px){
+    .circle::before{
+        left: 140px;
+        
+    }
+}
+@media (width >= 625px){
+    .circle::before{
+        left: 400px;
+        top: 0;
+
+    }
+}
+@media (width >= 700px){
+    section{
+        padding-inline: 40px;
+    }
+    .circle::before{
+        left: 490px;
+        width: 200%;
+        
+    }
+
+    section.hero-section .image .arrow{
+        transform: rotate(290deg);
+        position: absolute;
+        left: 150px;
+        top: 0;
+    }
+    section.experience-section .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .review-container{
+    display: grid;
+     grid-template-columns: repeat(2, 1fr);
+    }
+    section.skills-section img{
+        width: 70%;
+       
+    }
+    section.project-section .container{
+        display: flex;
+        flex-direction: row;
+        gap:0px;
+        align-items: center;
+        justify-content: center;
+    }
+    section.project-section .container .content{
+        flex-basis: 50%;
+    }
+    section.project-section .container-two{
+        flex-direction: row-reverse;
+    }
+    section.project-section .container-two .content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        flex-basis: 50%;
+    }
+    section.project-section .container-two .content .main-content{
+        margin-left: -20px;
+        
+    }
+    section.project-section .container .content .main-content{
+        margin-right: -20px;
+        z-index: 40000
+    }
+    section.project-section .container .image{
+        flex-basis: 50%;
+        z-index: -4;
+
+    }
+}
+
+@media (width >= 800px){
+    .circle::before{
+        left: 40px;
+        top: 40px;
+        width: 80%;
+        
+    }
+    
+    section.hero-section .container .content .desktop{
+        display: initial;
+        margin-bottom: 0px; 
+       
+    }
+    section.hero-section .container .content h2{
+        margin: 0;
+        padding-top: 20px;
+        text-align: left;
+    }
+
+    section.hero-section .container .content{
+        position: relative;
+        
+    }
+    section.hero-section .container .content h1, section.hero-section .container p {
+        text-align: left;
+        padding: 0;
+        margin:0;
+    }
+    section.hero-section .container .content h1{
+        max-width: 400px;
+        font-size: 2.2rem;
+    }
+    section.hero-section .container .content .arrow{
+        position: absolute;
+        top: -20px;
+        left: -50px;
+    }
+    section.hero-section .container .mobile{
+        display: none;
+    }
+    section.hero-section .container{
+        flex-direction: row;
+        text-align: left;
+        justify-content: center;
+        align-items: center;
+    }
+    section.contact-section .container{
+        flex-direction : row;
+    }
+    section.contact-section .container .content,section.contact-section .container .form{
+        flex-basis: 50%;
+    } 
+    section.about-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    section.about-section  p{
+        max-width: 680px;
+    }
+
+}
+
+@media (width >= 950px){
+    header{
+        right: 80px;
+        left: 80px;
+    }
+    section.hero-section{
+        padding-top: 80px;
+        padding-bottom: 0;
+    }
+    section{
+        padding-block: 120px;
+        padding-inline: 80px;
+    }
+    header nav .icon{
+        display: none;
+    }
+    header nav {
+        position: initial;
+        padding-inline: 30px
+    }
+    header nav ul {
+        position: initial;
+        transform: translateY(0px);
+        background: transparent;
+        gap:20px;
+        padding: 0;
+        background-color: none;
+        backdrop-filter: 0;
+    }
+    header nav ul .child-one, header nav ul .child-two{
+        display: flex;
+        flex-direction: row;
+        gap:20px
+    }
+}
